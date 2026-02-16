@@ -3,9 +3,11 @@
    Supabase integration, animations, video controls, data flow
    ═══════════════════════════════════════════════════════════════ */
 
-// ─── SUPABASE CONFIG ───
-const SUPABASE_URL = 'https://kkstktmvkyswpkwtccst.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtrc3RrdG12a3lzd3Brd3RjY3N0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEyMjI0NjEsImV4cCI6MjA4Njc5ODQ2MX0.OkS9I_AiVTZkageWIyvnJzaEuGr982e7u3imQDIEPt8';
+// ─── EMAILJS CONFIG ───
+// Sign up at https://www.emailjs.com and replace these with your real IDs
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';   // EmailJS → Account → Public Key
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';   // EmailJS → Email Services → Service ID
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // EmailJS → Email Templates → Template ID
 
 // ─── NAVBAR SCROLL EFFECT ───
 const navbar = document.getElementById('navbar');
@@ -165,7 +167,7 @@ function initDataFlowAnimation() {
     }
 }
 
-// ─── CONTACT FORM (SUPABASE) ───
+// ─── CONTACT FORM (EMAILJS) ───
 async function handleContactSubmit(e) {
     e.preventDefault();
 
@@ -173,42 +175,29 @@ async function handleContactSubmit(e) {
     const btn = form.querySelector('button[type="submit"]');
     const statusEl = document.getElementById('formStatus');
 
-    const payload = {
-        name: form.name.value.trim(),
-        email: form.email.value.trim(),
-        company: form.company.value.trim(),
-        subject: form.subject.value.trim(),
-        message: form.message.value.trim(),
-        created_at: new Date().toISOString()
-    };
-
     btn.disabled = true;
     btn.textContent = 'Sending...';
     statusEl.className = 'form-status';
     statusEl.style.display = 'none';
 
-    try {
-        const res = await fetch(`${SUPABASE_URL}/rest/v1/contact_inquiries`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'apikey': SUPABASE_ANON_KEY,
-                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                'Prefer': 'return=minimal'
-            },
-            body: JSON.stringify(payload)
-        });
+    // These template parameter names must match your EmailJS template variables
+    const templateParams = {
+        from_name: form.name.value.trim(),
+        from_email: form.email.value.trim(),
+        company: form.company.value.trim(),
+        subject: form.subject.value.trim(),
+        message: form.message.value.trim()
+    };
 
-        if (res.ok || res.status === 201) {
-            statusEl.className = 'form-status success';
-            statusEl.textContent = '✓ Thank you! Your inquiry has been submitted. We\'ll get back to you soon.';
-            statusEl.style.display = 'block';
-            form.reset();
-        } else {
-            throw new Error(`Server responded with ${res.status}`);
-        }
+    try {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY);
+
+        statusEl.className = 'form-status success';
+        statusEl.textContent = '✓ Thank you! Your inquiry has been sent. We\'ll get back to you soon.';
+        statusEl.style.display = 'block';
+        form.reset();
     } catch (err) {
-        console.error('Form submission error:', err);
+        console.error('EmailJS error:', err);
         statusEl.className = 'form-status error';
         statusEl.textContent = '⚠ Something went wrong. Please try emailing us directly at motty@relishfoods.co';
         statusEl.style.display = 'block';
