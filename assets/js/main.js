@@ -84,18 +84,19 @@ function formatTime(seconds) {
 function initDataFlowAnimation() {
     const steps = [
         { id: 0, name: 'Raw Material Intake', form: 'Form 1', type: 'prod', color: '#3B82F6' },
-        { id: 1, name: 'QC Quality Check', form: 'Form 4', type: 'qc', color: '#10B981' },
-        { id: 2, name: 'Processing', form: null, type: 'proc', color: '#F59E0B' },
-        { id: 3, name: 'QC Yield Verification', form: 'Form 5', type: 'qc', color: '#10B981' },
-        { id: 4, name: 'Pre-Processing Complete', form: 'Form 2', type: 'prod', color: '#3B82F6' },
-        { id: 5, name: 'Freezing & Packing', form: 'Form 3', type: 'prod', color: '#3B82F6' },
-        { id: 6, name: 'Final QC Check', form: 'Final Check', type: 'qc', color: '#10B981' },
-        { id: 7, name: 'Product Out', form: null, type: 'ship', color: '#8B5CF6' }
+        { id: 1, name: 'Intake QC Check', form: 'QC Form 1', type: 'qc', color: '#10B981' },
+        { id: 2, name: 'Pre-Processing', form: 'Form 2', type: 'prod', color: '#3B82F6' },
+        { id: 3, name: 'Pre-Process QC Check', form: 'QC Form 2', type: 'qc', color: '#10B981' },
+        { id: 4, name: 'Processing', form: 'Form 3', type: 'prod', color: '#F59E0B' },
+        { id: 5, name: 'Processing QC Check', form: 'QC Form 3', type: 'qc', color: '#10B981' },
+        { id: 6, name: 'Freezing & Packing', form: 'Form 4', type: 'prod', color: '#3B82F6' },
+        { id: 7, name: 'Final QC Check', form: 'QC Form 4', type: 'qc', color: '#10B981' },
+        { id: 8, name: 'Product Out', form: null, type: 'ship', color: '#8B5CF6' }
     ];
 
     let activeStep = 0;
-    const prodSteps = [0, 4, 5];
-    const qcSteps = [1, 3, 6];
+    const prodSteps = [0, 2, 4, 6];
+    const qcSteps = [1, 3, 5, 7];
 
     // Get all DOM elements
     const prodCards = document.querySelectorAll('.df-prod-step');
