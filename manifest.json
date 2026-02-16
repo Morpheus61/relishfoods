@@ -1,0 +1,21 @@
+{
+    "name": "Relish Hao Hao Chi Foods",
+    "short_name": "Relish Foods",
+    "description": "Premium Clam Processing from Kerala's Backwaters",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0f14",
+    "theme_color": "#0a0f14",
+    "icons": [
+        {
+            "src": "assets/images/relish-logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/images/relish-logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
