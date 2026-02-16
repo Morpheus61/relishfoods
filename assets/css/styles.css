@@ -232,7 +232,7 @@ nav.scrolled {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
     color: var(--teal-light);
-    font-style: italic;
+    font-style: normal;
     letter-spacing: 0.02em;
 }
 
@@ -1475,5 +1475,10 @@ footer a {
         font-size: 0.72rem;
         padding: 0.6rem 1rem;
         letter-spacing: 0.05em;
+    }
+    .hero-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        white-space: nowrap;
     }
 }
