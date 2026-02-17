@@ -45,10 +45,10 @@
     <!-- DNS Prefetch for third-party origins -->
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
-    <!-- Fonts (trimmed to only used weights) -->
+    <!-- Fonts (non-render-blocking, trimmed to only used weights) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -166,7 +166,7 @@
                 <li><a href="#markets">Markets</a></li>
                 <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
             </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileNav()">
+            <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Open mobile menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -189,6 +189,7 @@
         <div class="hero-video-bg">
             <video autoplay muted loop playsinline preload="none">
                 <source src="assets/videos/hero-water.mp4" type="video/mp4">
+                <track kind="captions" default>
             </video>
             <div class="hero-video-overlay"></div>
         </div>
@@ -288,37 +289,37 @@
             <div class="process-flow reveal">
                 <div class="process-step">
                     <div class="process-step-dot">🥚</div>
-                    <h4>Hatchery</h4>
+                    <h3>Hatchery</h3>
                     <p>Seed production in our integrated clam hatchery</p>
                 </div>
                 <div class="process-step">
                     <div class="process-step-dot">🌊</div>
-                    <h4>Grow Out</h4>
+                    <h3>Grow Out</h3>
                     <p>Community-managed in natural backwater beds</p>
                 </div>
                 <div class="process-step">
                     <div class="process-step-dot">🪣</div>
-                    <h4>Harvesting</h4>
+                    <h3>Harvesting</h3>
                     <p>Traditional methods by local fishermen</p>
                 </div>
                 <div class="process-step">
                     <div class="process-step-dot">💧</div>
-                    <h4>Depuration</h4>
+                    <h3>Depuration</h3>
                     <p>Advanced purging systems for purity</p>
                 </div>
                 <div class="process-step">
                     <div class="process-step-dot">🏭</div>
-                    <h4>Processing</h4>
+                    <h3>Processing</h3>
                     <p>Automated grading, cooking & separation</p>
                 </div>
                 <div class="process-step">
                     <div class="process-step-dot">📦</div>
-                    <h4>Packing</h4>
+                    <h3>Packing</h3>
                     <p>QC-verified freezing & packaging</p>
                 </div>
                 <div class="process-step">
                     <div class="process-step-dot">✈️</div>
-                    <h4>Export</h4>
+                    <h3>Export</h3>
                     <p>Global shipment to key markets</p>
                 </div>
             </div>
@@ -403,6 +404,7 @@
             <div class="portfolio-video-container reveal">
                 <video id="portfolioVideo" preload="none" poster="assets/images/relish-logo.png">
                     <source src="assets/videos/product-profile.mp4" type="video/mp4">
+                    <track kind="captions" default>
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-controls">
@@ -745,39 +747,39 @@
                         <div class="contact-item">
                             <div class="contact-item-icon">📍</div>
                             <div>
-                                <h4>Address</h4>
+                                <h3>Address</h3>
                                 <p>Relish Hao Hao Chi Foods<br>26/599, M.O. Ward,<br>Alappuzha, Kerala<br>India — 688001</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-item-icon">👤</div>
                             <div>
-                                <h4>Contact Person</h4>
+                                <h3>Contact Person</h3>
                                 <p>Motty Philip</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-item-icon">📞</div>
                             <div>
-                                <h4>Phone / WhatsApp</h4>
+                                <h3>Phone / WhatsApp</h3>
                                 <a href="tel:+919446012324">+91 94460 12324</a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-item-icon">✉️</div>
                             <div>
-                                <h4>Email</h4>
+                                <h3>Email</h3>
                                 <a href="mailto:motty@relishfoods.co">motty@relishfoods.co</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="associates">
-                        <h4>Our Associates</h4>
+                        <h3>Our Associates</h3>
                         <div class="associates-logos">
                             <span>苏州泰进食品有限公司<br>Suzhou Taishin Food Co Ltd</span>
                             <span>·</span>
-                            <span>FoodStream Ltd</span>
+                            <span>食流有限公司<br>FoodStream Ltd</span>
                         </div>
                     </div>
                 </div>

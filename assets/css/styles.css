@@ -563,7 +563,7 @@ section {
 .process-step:nth-child(6) .process-step-dot { background: rgba(224,122,58,0.2); border: 2px solid var(--coral); }
 .process-step:nth-child(7) .process-step-dot { background: rgba(42,157,143,0.2); border: 2px solid var(--teal-light); }
 
-.process-step h4 {
+.process-step h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
     font-weight: 500;
@@ -1260,7 +1260,7 @@ section {
     font-size: 1.2rem;
 }
 
-.contact-item h4 {
+.contact-item h3 {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -1365,7 +1365,7 @@ section {
     border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-.associates h4 {
+.associates h3 {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -1389,7 +1389,7 @@ section {
 /* ─── FOOTER ─── */
 footer {
     background: #060d18;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.6);
     padding: 2rem;
     text-align: center;
     font-size: 0.8rem;
@@ -1397,8 +1397,8 @@ footer {
 }
 
 footer a {
-    color: rgba(255,255,255,0.5);
-    text-decoration: none;
+    color: rgba(255,255,255,0.75);
+    text-decoration: underline;
 }
 
 /* ─── MOBILE NAV ─── */

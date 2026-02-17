@@ -157,13 +157,15 @@ function initDataFlowAnimation() {
             }
         });
 
-        // Move particle
+        // Move particle (deferred to avoid forced reflow after style changes)
         if (particle && pipelineNodes[activeStep]) {
-            const container = document.querySelector('.df-pipeline-steps');
-            const containerRect = container.getBoundingClientRect();
-            const nodeRect = pipelineNodes[activeStep].getBoundingClientRect();
-            const leftPct = ((nodeRect.left - containerRect.left + nodeRect.width / 2 - 6) / containerRect.width) * 100;
-            particle.style.left = leftPct + '%';
+            requestAnimationFrame(() => {
+                const container = document.querySelector('.df-pipeline-steps');
+                const containerRect = container.getBoundingClientRect();
+                const nodeRect = pipelineNodes[activeStep].getBoundingClientRect();
+                const leftPct = ((nodeRect.left - containerRect.left + nodeRect.width / 2 - 6) / containerRect.width) * 100;
+                particle.style.left = leftPct + '%';
+            });
         }
 
         // Advance
