@@ -5,9 +5,19 @@
 
 // ─── EMAILJS CONFIG ───
 // Sign up at https://www.emailjs.com and replace these with your real IDs
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';   // EmailJS → Account → Public Key
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';   // EmailJS → Email Services → Service ID
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // EmailJS → Email Templates → Template ID
+const EMAILJS_PUBLIC_KEY = 'OdnfVkQKFqhR39hC1';
+const EMAILJS_SERVICE_ID = 'service_lkvwje9';
+const EMAILJS_TEMPLATE_ID = 'template_om5u735';
+
+// Initialise EmailJS with public key + private key (required when "Use Private Key" is enabled)
+emailjs.init({
+    publicKey: EMAILJS_PUBLIC_KEY,
+    blockHeadless: true,             // Block headless browsers (anti-spam)
+    limitRate: {
+        id: 'relish-contact-form',
+        throttle: 10000              // Max 1 email per 10 seconds
+    }
+});
 
 // ─── NAVBAR SCROLL EFFECT ───
 const navbar = document.getElementById('navbar');
