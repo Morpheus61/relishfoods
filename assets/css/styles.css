@@ -700,6 +700,8 @@ section {
 
 .portfolio-video-container {
     margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
@@ -707,6 +709,7 @@ section {
     background: #000;
     aspect-ratio: 16/9;
     max-height: 75vh;
+    max-width: calc(75vh * 16 / 9);
 }
 
 .portfolio-video-container video {
