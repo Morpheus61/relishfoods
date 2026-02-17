@@ -218,6 +218,7 @@ nav.scrolled {
     font-weight: 300;
     color: white;
     line-height: 1.15;
+    margin-top: 2rem;
     margin-bottom: 1.5rem;
     animation: hero-fade-in 1.2s ease-out 0.5s both;
 }
