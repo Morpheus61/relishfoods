@@ -1,0 +1,9 @@
+# Relish Hao Hao Chi Foods — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://relishfoods.co/sitemap.xml
+
+# Disallow internal tooling
+Disallow: /data-flow-animation/
