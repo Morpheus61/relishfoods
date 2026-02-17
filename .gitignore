@@ -28,6 +28,13 @@ Desktop.ini
 *.log
 npm-debug.log*
 
+# ═══ Offline Build ═══
+offline-build/
+Relish-Website-Offline.zip
+
+# ═══ Python venv ═══
+.venv/
+
 # ═══ Large Media Files ═══
 *.mp4
 *.mov
