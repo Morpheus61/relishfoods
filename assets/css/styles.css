@@ -1895,3 +1895,86 @@ button.replay:focus-visible { outline: 1.5px solid var(--teal-bright); outline-o
     .flow-col + .flow-col { border-left: none; border-top: 1px solid var(--line); }
     .process, .dataflow { padding: 64px 0 56px; }
 }
+
+/* ─── FACILITY STATUS ─── */
+.facility-status {
+    background: var(--sand-light);
+}
+
+.facility-milestones {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 3rem;
+    row-gap: 1.5rem;
+}
+
+.milestone {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 10px;
+    border: 1.5px solid;
+    background: white;
+    min-width: 160px;
+    flex-shrink: 0;
+}
+.milestone--done {
+    border-color: var(--teal);
+}
+.milestone--active {
+    border-color: var(--coral);
+    background: #fff8f4;
+}
+.milestone--pending {
+    border-color: rgba(0,0,0,0.1);
+    opacity: 0.65;
+}
+
+.milestone-icon { display: flex; align-items: center; color: var(--teal); flex-shrink: 0; }
+.milestone--active .milestone-icon { color: var(--coral); }
+.milestone--pending .milestone-icon { color: var(--warm-gray); }
+
+.milestone-body { display: flex; flex-direction: column; gap: 0.25rem; }
+
+.milestone-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+.milestone-status {
+    font-size: 0.68rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.milestone-status--done  { color: var(--teal); }
+.milestone-status--active { color: var(--coral); }
+.milestone-status--pending { color: var(--warm-gray); }
+
+.milestone-connector {
+    flex: 1;
+    height: 2px;
+    background: rgba(0,0,0,0.1);
+    min-width: 24px;
+    max-width: 48px;
+}
+.milestone-connector--done { background: var(--teal); opacity: 0.5; }
+
+@media (max-width: 860px) {
+    .facility-milestones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .milestone-connector {
+        width: 2px;
+        height: 20px;
+        min-width: unset;
+        max-width: unset;
+        margin-left: 1.4rem;
+    }
+}
