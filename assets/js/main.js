@@ -431,8 +431,6 @@ async function handleContactSubmit(e) {
 document.addEventListener('DOMContentLoaded', () => {
     initVideoPlayer();
     initVideoLazyLoad();
-    initRingAnimation();
-    initFlowBoard();
     initProcessRing();
     initFlowBoard();
 
