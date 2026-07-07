@@ -1517,7 +1517,7 @@ footer a {
 /* Section padding & background overrides */
 .process {
     background: var(--bg);
-    padding: 96px 0 80px;
+    padding: 56px 0 48px;
 }
 .dataflow {
     background: var(--bg);
@@ -1557,7 +1557,7 @@ footer a {
     font-size: clamp(28px, 4vw, 42px);
     font-weight: 600;
     letter-spacing: -0.01em;
-    margin: 0 0 12px;
+    margin: 0 0 20px;
     max-width: 640px;
     line-height: 1.15;
     color: var(--ink);
@@ -1570,7 +1570,7 @@ footer a {
     font-size: 15.5px;
     line-height: 1.6;
     max-width: 560px;
-    margin: 0 0 56px;
+    margin: 0 0 28px;
 }
 
 /* ─── CIRCULAR PROCESS DIAGRAM ─── */
