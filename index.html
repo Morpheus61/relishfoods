@@ -48,7 +48,7 @@
     <!-- Fonts (non-render-blocking, trimmed to only used weights) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -389,51 +389,33 @@
 
     <!-- ═══ CIRCULAR ECONOMY / PROCESS ═══ -->
     <section class="process" id="process">
-        <div class="section-inner" style="text-align:center;">
-            <p class="section-label reveal">Our Process</p>
-            <h2 class="section-title reveal">Truly Circular Economy</h2>
-            <p class="section-desc reveal" style="margin: 0 auto;">From hatchery to export — a complete, sustainable cycle that gives back to the ecosystem.</p>
+        <div class="page">
+            <div class="eyebrow mono">Closed-Loop System</div>
+            <h1 class="section-title">One cycle, no waste. Seed to export, and back to seed.</h1>
+            <p class="section-sub">Every stage feeds the next — including the last one, which feeds the first. Select a stage to see how it connects.</p>
 
-            <div class="process-flow reveal">
-                <div class="process-step">
-                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-hatchery"/></svg></div>
-                    <h3>Hatchery</h3>
-                    <p>Seed production in our integrated clam hatchery</p>
+            <div class="circle-wrap">
+                <div class="diagram-stage">
+                    <svg id="ring" viewBox="0 0 400 400" role="group" aria-label="Closed-loop process diagram: seven stages from Hatchery to Export, returning to Hatchery">
+                        <circle class="ring-track" cx="200" cy="200" r="160"/>
+                        <path id="progressArc" class="ring-progress" d=""/>
+                        <circle id="pulseDot" class="pulse-dot" r="4" fill="#4fb8b0"/>
+                        <!-- stage nodes injected by JS -->
+                        <g id="nodesGroup"></g>
+                    </svg>
+                    <div class="center-label" aria-live="polite">
+                        <div class="cl-eyebrow mono">Stage <span id="stageIndex">01</span> / 07</div>
+                        <div class="cl-title" id="stageTitle">Hatchery</div>
+                        <div class="cl-loop mono" id="stageLoopNote">Seed stock originates here</div>
+                    </div>
                 </div>
-                <div class="process-step">
-                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-growout"/></svg></div>
-                    <h3>Grow Out</h3>
-                    <p>Community-managed in natural backwater beds</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-harvest"/></svg></div>
-                    <h3>Harvesting</h3>
-                    <p>Traditional methods by local fishermen</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-depuration"/></svg></div>
-                    <h3>Depuration</h3>
-                    <p>Advanced purging systems for purity</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-plant"/></svg></div>
-                    <h3>Processing</h3>
-                    <p>Automated grading, cooking & separation</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-pack"/></svg></div>
-                    <h3>Packing</h3>
-                    <p>QC-verified freezing & packaging</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-export"/></svg></div>
-                    <h3>Export</h3>
-                    <p>Global shipment to key markets</p>
-                </div>
+
+                <div class="stage-list" id="stageList"></div>
             </div>
 
-            <div class="process-badge reveal">
-                <span><svg class="ri" aria-hidden="true" width="20" height="20" style="color:var(--teal-light);vertical-align:middle"><use href="#ri-export"/></svg> &nbsp; Seeds return to hatchery — completing the circle</span>
+            <div class="loop-note">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1L8 15M8 15L4 11M8 15L12 11" stroke="#8a7454" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span><b style="color:var(--ink)">Why it's a circle, not a line:</b> seed stock and recovered shell from the Export stage are re-seeded at Hatchery — the diagram's shape is the process, not a metaphor for it.</span>
             </div>
         </div>
     </section>
@@ -572,245 +554,27 @@
 
     <!-- ═══ DATA FLOW ANIMATION ═══ -->
     <section class="dataflow" id="dataflow">
-        <div class="section-inner">
-            <div class="dataflow-header">
-                <p class="section-label reveal">Total Quality Assurance</p>
-                <h2 class="section-title reveal">Processing Data Flow</h2>
-                <p class="section-desc reveal" style="margin: 0 auto;">Watch how Production Staff & QC Staff collect data through the processing pipeline in real-time.</p>
-            </div>
+        <div class="page">
+            <div class="eyebrow mono">Dual-Verification Pipeline</div>
+            <h1 class="section-title">Production and QC run in parallel. Neither stage advances alone.</h1>
+            <p class="section-sub">Every checkpoint needs two independent confirmations before the batch moves forward — the same maker-checker discipline used across the plant floor.</p>
 
-            <div class="dataflow-animation-area reveal">
-                <!-- Two Streams Side by Side -->
-                <div class="dataflow-streams">
-                    <!-- Production Stream -->
-                    <div>
-                        <div class="stream-header">
-                            <div class="stream-header-icon prod"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-pack"/></svg></div>
-                            <h3 class="prod-color">Production Stream</h3>
-                        </div>
-
-                        <div class="df-step df-prod-step">
-                            <div class="df-sent-badge prod-bg">Data Sent</div>
-                            <div class="df-step-header">
-                                <span class="df-step-name">Raw Material Intake</span>
-                                <span class="df-step-form prod-bg">Form 1</span>
-                            </div>
-                            <div class="df-step-worker">
-                                <div class="df-worker-avatar prod-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-production"/></svg></div>
-                                <div class="df-worker-info">
-                                    <p>Production Staff</p>
-                                    <p>Collecting data...</p>
-                                </div>
-                            </div>
-                            <div class="df-data-icons">
-                                <span class="df-data-tag">IMG</span><span class="df-data-tag">SCAN</span><span class="df-data-tag">WT</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-data"/></svg>
-                            </div>
-                        </div>
-
-                        <div class="df-step df-prod-step">
-                            <div class="df-sent-badge prod-bg">Data Sent</div>
-                            <div class="df-step-header">
-                                <span class="df-step-name">Pre-Processing</span>
-                                <span class="df-step-form prod-bg">Form 2</span>
-                            </div>
-                            <div class="df-step-worker">
-                                <div class="df-worker-avatar prod-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-production"/></svg></div>
-                                <div class="df-worker-info">
-                                    <p>Production Staff</p>
-                                    <p>Collecting data...</p>
-                                </div>
-                            </div>
-                            <div class="df-data-icons">
-                                <span class="df-data-tag">IMG</span><span class="df-data-tag">SCAN</span><span class="df-data-tag">WT</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-data"/></svg>
-                            </div>
-                        </div>
-
-                        <div class="df-step df-prod-step">
-                            <div class="df-sent-badge prod-bg">Data Sent</div>
-                            <div class="df-step-header">
-                                <span class="df-step-name">Processing</span>
-                                <span class="df-step-form prod-bg">Form 3</span>
-                            </div>
-                            <div class="df-step-worker">
-                                <div class="df-worker-avatar prod-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-production"/></svg></div>
-                                <div class="df-worker-info">
-                                    <p>Production Staff</p>
-                                    <p>Collecting data...</p>
-                                </div>
-                            </div>
-                            <div class="df-data-icons">
-                                <span class="df-data-tag">IMG</span><span class="df-data-tag">SCAN</span><span class="df-data-tag">WT</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-data"/></svg>
-                            </div>
-                        </div>
-
-                        <div class="df-step df-prod-step">
-                            <div class="df-sent-badge prod-bg">Data Sent</div>
-                            <div class="df-step-header">
-                                <span class="df-step-name">Freezing & Packing</span>
-                                <span class="df-step-form prod-bg">Form 4</span>
-                            </div>
-                            <div class="df-step-worker">
-                                <div class="df-worker-avatar prod-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-production"/></svg></div>
-                                <div class="df-worker-info">
-                                    <p>Production Staff</p>
-                                    <p>Collecting data...</p>
-                                </div>
-                            </div>
-                            <div class="df-data-icons">
-                                <span class="df-data-tag">IMG</span><span class="df-data-tag">SCAN</span><span class="df-data-tag">WT</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-data"/></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- QC Stream -->
-                    <div>
-                        <div class="stream-header">
-                            <div class="stream-header-icon qc"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-qc"/></svg></div>
-                            <h3 class="qc-color">Quality Assurance Stream</h3>
-                        </div>
-
-                        <div class="df-step df-qc-step">
-                            <div class="df-sent-badge qc-bg">QC Data Sent</div>
-                            <div class="df-step-header">
-                                <span class="df-step-name">Intake QC Check</span>
-                                <span class="df-step-form qc-bg">QC Form 1</span>
-                            </div>
-                            <div class="df-step-worker">
-                                <div class="df-worker-avatar qc-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-qc"/></svg></div>
-                                <div class="df-worker-info">
-                                    <p>QC Inspector</p>
-                                    <p>Performing checks...</p>
-                                </div>
-                            </div>
-                            <div class="df-data-icons">
-                                <span class="df-data-tag">OK</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-coldchain"/></svg><span class="df-data-tag">WT</span><span class="df-data-tag">IMG</span>
-                            </div>
-                        </div>
-
-                        <div class="df-step df-qc-step">
-                            <div class="df-sent-badge qc-bg">QC Data Sent</div>
-                            <div class="df-step-header">
-                                <span class="df-step-name">Pre-Process QC Check</span>
-                                <span class="df-step-form qc-bg">QC Form 2</span>
-                            </div>
-                            <div class="df-step-worker">
-                                <div class="df-worker-avatar qc-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-qc"/></svg></div>
-                                <div class="df-worker-info">
-                                    <p>QC Inspector</p>
-                                    <p>Performing checks...</p>
-                                </div>
-                            </div>
-                            <div class="df-data-icons">
-                                <span class="df-data-tag">OK</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-coldchain"/></svg><span class="df-data-tag">WT</span><span class="df-data-tag">IMG</span>
-                            </div>
-                        </div>
-
-                        <div class="df-step df-qc-step">
-                            <div class="df-sent-badge qc-bg">QC Data Sent</div>
-                            <div class="df-step-header">
-                                <span class="df-step-name">Processing QC Check</span>
-                                <span class="df-step-form qc-bg">QC Form 3</span>
-                            </div>
-                            <div class="df-step-worker">
-                                <div class="df-worker-avatar qc-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-qc"/></svg></div>
-                                <div class="df-worker-info">
-                                    <p>QC Inspector</p>
-                                    <p>Performing checks...</p>
-                                </div>
-                            </div>
-                            <div class="df-data-icons">
-                                <span class="df-data-tag">OK</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-coldchain"/></svg><span class="df-data-tag">WT</span><span class="df-data-tag">IMG</span>
-                            </div>
-                        </div>
-
-                        <div class="df-step df-qc-step">
-                            <div class="df-sent-badge qc-bg">QC Data Sent</div>
-                            <div class="df-step-header">
-                                <span class="df-step-name">Final QC Check</span>
-                                <span class="df-step-form qc-bg">QC Form 4</span>
-                            </div>
-                            <div class="df-step-worker">
-                                <div class="df-worker-avatar qc-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-qc"/></svg></div>
-                                <div class="df-worker-info">
-                                    <p>QC Inspector</p>
-                                    <p>Performing checks...</p>
-                                </div>
-                            </div>
-                            <div class="df-data-icons">
-                                <span class="df-data-tag">OK</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-coldchain"/></svg><span class="df-data-tag">WT</span><span class="df-data-tag">IMG</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="flow-board">
+                <div class="flow-header">
+                    <div class="flow-title mono">BATCH #RH-SAMPLE-001 · FROZEN WHOLE CLAM</div>
+                    <div class="live mono"><span class="live-dot"></span>SIMULATION RUNNING</div>
                 </div>
 
-                <!-- Processing Pipeline -->
-                <div class="df-pipeline">
-                    <h3 class="df-pipeline-title">Processing Pipeline</h3>
-                    <div class="df-pipeline-steps">
-                        <div class="df-pipeline-node">
-                            <div class="df-node-circle">1</div>
-                            <span class="df-node-label">Raw Intake</span>
-                        </div>
-                        <div class="df-pipeline-node">
-                            <div class="df-node-circle">2</div>
-                            <span class="df-node-label">QC Check</span>
-                        </div>
-                        <div class="df-pipeline-node">
-                            <div class="df-node-circle">3</div>
-                            <span class="df-node-label">Pre-Process</span>
-                        </div>
-                        <div class="df-pipeline-node">
-                            <div class="df-node-circle">4</div>
-                            <span class="df-node-label">QC Check</span>
-                        </div>
-                        <div class="df-pipeline-node">
-                            <div class="df-node-circle">5</div>
-                            <span class="df-node-label">Processing</span>
-                        </div>
-                        <div class="df-pipeline-node">
-                            <div class="df-node-circle">6</div>
-                            <span class="df-node-label">QC Check</span>
-                        </div>
-                        <div class="df-pipeline-node">
-                            <div class="df-node-circle">7</div>
-                            <span class="df-node-label">Freeze/Pack</span>
-                        </div>
-                        <div class="df-pipeline-node">
-                            <div class="df-node-circle">8</div>
-                            <span class="df-node-label">Final QC</span>
-                        </div>
-                        <div class="df-pipeline-node">
-                            <div class="df-node-circle">9</div>
-                            <span class="df-node-label">Product Out</span>
-                        </div>
-                        <!-- Animated particle -->
-                        <div class="df-particle" id="dfParticle"></div>
-                    </div>
+                <div class="flow-grid" id="flowGrid">
+                    <!-- columns injected by JS -->
                 </div>
-            </div>
 
-            <!-- Legend -->
-            <div class="df-legend reveal">
-                <div class="df-legend-item">
-                    <div class="df-legend-dot prod"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-production"/></svg></div>
-                    <div class="df-legend-text">
-                        <p>Production Staff</p>
-                        <p>White coat, hairnet, gloves</p>
-                    </div>
-                </div>
-                <div class="df-legend-item">
-                    <div class="df-legend-dot qc"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-qc"/></svg></div>
-                    <div class="df-legend-text">
-                        <p>QC Inspector</p>
-                        <p>Lab coat, safety glasses</p>
-                    </div>
-                </div>
-                <div class="df-legend-item">
-                    <div class="df-legend-dot data"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-data"/></svg></div>
-                    <div class="df-legend-text">
-                        <p>Data Flow</p>
-                        <p>Real-time data transmission</p>
-                    </div>
+                <div class="flow-footer">
+                    <span>4 checkpoints · 8 independent confirmations</span>
+                    <button type="button" class="replay" id="replayBtn" aria-label="Replay the data flow simulation">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M10 6a4 4 0 1 1-1.2-2.85M10 2v2.8H7.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Replay
+                    </button>
                 </div>
             </div>
         </div>
