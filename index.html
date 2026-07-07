@@ -141,6 +141,114 @@
 </head>
 <body>
 
+    <!-- ═══ SVG ICON SPRITE (inline, hidden — reference with <use href="#ri-...">) ═══ -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+        <symbol id="ri-hatchery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5C8.7 3.5 6 8.6 6 13a6 6 0 0 0 12 0c0-4.4-2.7-9.5-6-9.5Z"/>
+          <circle cx="12" cy="13.2" r="1.4"/>
+        </symbol>
+        <symbol id="ri-growout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2.5 9.5c1.6-2.4 3.6-2.4 5.2 0s3.6 2.4 5.2 0 3.6-2.4 5.2 0 2.4 1.7 3.4 1"/>
+          <path d="M2.5 15c1.6-2.4 3.6-2.4 5.2 0s3.6 2.4 5.2 0 3.6-2.4 5.2 0 2.4 1.7 3.4 1"/>
+        </symbol>
+        <symbol id="ri-harvest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.5 10.5h15l-1.6 8.3a2 2 0 0 1-2 1.7H8.1a2 2 0 0 1-2-1.7L4.5 10.5Z"/>
+          <path d="M8.5 10.5a3.5 3.5 0 0 1 7 0"/>
+          <path d="M9.2 14.5h.01M14.8 14.5h.01M12 17h.01"/>
+        </symbol>
+        <symbol id="ri-depuration" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5c-3 3.6-6 7.4-6 10.8a6 6 0 0 0 12 0c0-3.4-3-7.2-6-10.8Z"/>
+          <path d="M9.2 13.8h5.6M10.2 16.8h3.6"/>
+        </symbol>
+        <symbol id="ri-plant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3.5 20.5V9.5l5 3.2V9.5l5 3.2V9.5l7 4.2v6.8H3.5Z"/>
+          <path d="M6.5 9V5h2.5v5.6"/>
+          <path d="M7 17h2M12 17h2M17 17h1.5"/>
+        </symbol>
+        <symbol id="ri-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3.6"/>
+          <circle cx="12" cy="12" r="1.1"/>
+          <path d="M12 2.8v2.7M12 18.5v2.7M21.2 12h-2.7M5.5 12H2.8M18.5 5.5l-1.9 1.9M7.4 16.6l-1.9 1.9M18.5 18.5l-1.9-1.9M7.4 7.4 5.5 5.5"/>
+        </symbol>
+        <symbol id="ri-pack" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3 4.5 7v10L12 21l7.5-4V7L12 3Z"/>
+          <path d="M4.5 7 12 11l7.5-4M12 11v10"/>
+        </symbol>
+        <symbol id="ri-export" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2.8 14h18.4l-2.4 4.8H5.2L2.8 14Z"/>
+          <path d="M6.8 14v-3.5h4.4V14M11.2 14V7.5h4.4V14"/>
+          <path d="M3.5 21.5c1.4 1 2.8 1 4.2 0s2.9-1 4.3 0 2.9 1 4.3 0 2.8-1 4.2 0"/>
+        </symbol>
+        <symbol id="ri-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19.5 4.5c-9 0-14.5 5-14.5 12.5V20s1.2-2 3.2-2c7.5 0 11.3-6 11.3-13.5Z"/>
+          <path d="M6.5 17.5C9 12.5 12.8 9 17 7"/>
+        </symbol>
+        <symbol id="ri-community" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="8" r="3"/>
+          <path d="M3.5 20a5.5 5.5 0 0 1 11 0"/>
+          <path d="M15.4 5.4a3 3 0 0 1 0 5.2"/>
+          <path d="M17.5 15.3a5.5 5.5 0 0 1 3 4.7"/>
+        </symbol>
+        <symbol id="ri-anchor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="5" r="2.2"/>
+          <path d="M12 7.2V21M5 13a7 7 0 0 0 14 0"/>
+          <path d="M3.5 13h3M17.5 13h3"/>
+        </symbol>
+        <symbol id="ri-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3.5 3.5v17h17"/>
+          <path d="M7.5 16.5v-4M12 16.5V8.5M16.5 16.5v-6"/>
+        </symbol>
+        <symbol id="ri-clam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20.5 5 11.8A8.4 8.4 0 0 1 12 4a8.4 8.4 0 0 1 7 7.8l-7 8.7Z"/>
+          <path d="M12 20.5 8.2 9.2M12 20.5V6.8M12 20.5l3.8-11.3"/>
+        </symbol>
+        <symbol id="ri-bowl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3.5 12.5h17c0 4.7-3.8 8.5-8.5 8.5s-8.5-3.8-8.5-8.5Z"/>
+          <path d="M9.5 9c0-1.6 1.2-1.6 1.2-3.2M13.8 9c0-1.6 1.2-1.6 1.2-3.2"/>
+        </symbol>
+        <symbol id="ri-frozen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9"/>
+          <path d="M9.8 4.6 12 6.8l2.2-2.2M9.8 19.4 12 17.2l2.2 2.2"/>
+        </symbol>
+        <symbol id="ri-jar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 3.5h10v3H7Z"/>
+          <path d="M7.5 6.5h9v11a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3v-11Z"/>
+          <path d="M7.5 12c1.5-1 3-1 4.5 0s3 1 4.5 0"/>
+        </symbol>
+        <symbol id="ri-coldchain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 5.2a2 2 0 0 1 4 0v8.1a4.3 4.3 0 1 1-4 0V5.2Z"/>
+          <path d="M12 17.5v-4"/>
+        </symbol>
+        <symbol id="ri-production" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 15.5a7 7 0 0 1 14 0"/>
+          <path d="M3 15.5h18"/>
+          <path d="M10.5 8.7V12M13.5 8.7V12"/>
+        </symbol>
+        <symbol id="ri-qc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.5 3h5M10.5 3v6L5.4 18a2 2 0 0 0 1.8 3h9.6a2 2 0 0 0 1.8-3l-5.1-9V3"/>
+          <path d="M7.8 14.5h8.4"/>
+        </symbol>
+        <symbol id="ri-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="8.5"/>
+          <path d="M3.5 12h17M12 3.5c3 2.8 3 14.2 0 17M12 3.5c-3 2.8-3 14.2 0 17"/>
+        </symbol>
+        <symbol id="ri-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z"/>
+          <circle cx="12" cy="10" r="2.4"/>
+        </symbol>
+        <symbol id="ri-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="3.4"/>
+          <path d="M4.8 20.5a7.2 7.2 0 0 1 14.4 0"/>
+        </symbol>
+        <symbol id="ri-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 4.6c.8-.8 2-.8 2.7 0l1.8 1.9c.7.7.7 1.8 0 2.5l-.9 1c1 2 2.6 3.6 4.6 4.6l1-.9c.7-.7 1.8-.7 2.5 0l1.9 1.8c.8.8.8 2 0 2.7l-1.2 1.2c-.9.9-2.2 1.2-3.4.8-4.9-1.7-8.9-5.7-10.6-10.6-.4-1.2-.1-2.5.8-3.4L5 4.6Z"/>
+        </symbol>
+        <symbol id="ri-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3.5" y="5.5" width="17" height="13" rx="2"/>
+          <path d="m4.5 7 7.5 5.6L19.5 7"/>
+        </symbol>
+    </svg>
+
     <!-- Noscript fallback for search engines and users without JS -->
     <noscript>
         <div style="padding: 2rem; text-align: center; background: #0a0f14; color: #fff; font-family: sans-serif;">
@@ -230,7 +338,7 @@
                             <div class="stat-number" style="font-size: 2.5rem;">Vembanad Lake</div>
                             <div class="stat-label">Source of Premium Freshwater Clams</div>
                         </div>
-                        <div class="earth-badge">🌊 &nbsp; Earth Friendly &nbsp;·&nbsp; Community Driven</div>
+                        <div class="earth-badge"><svg class="ri" aria-hidden="true" width="18" height="18"><use href="#ri-growout"/></svg> &nbsp; Earth Friendly &nbsp;·&nbsp; Community Driven</div>
                     </div>
                 </div>
             </div>
@@ -246,32 +354,32 @@
 
             <div class="diff-grid">
                 <div class="diff-card reveal">
-                    <div class="diff-icon">🌱</div>
+                    <div class="diff-icon"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-leaf"/></svg></div>
                     <h3>ESG Impact</h3>
                     <p>Integrated clam hatchery ensuring sustainable supply without depleting natural populations. A truly circular economy approach.</p>
                 </div>
                 <div class="diff-card reveal" style="transition-delay:0.1s">
-                    <div class="diff-icon">🤝</div>
+                    <div class="diff-icon"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-community"/></svg></div>
                     <h3>Community Engagement</h3>
                     <p>Grow-out and harvest managed by local fishermen communities, providing livelihoods while maintaining traditional knowledge.</p>
                 </div>
                 <div class="diff-card reveal" style="transition-delay:0.2s">
-                    <div class="diff-icon">🚢</div>
+                    <div class="diff-icon"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-anchor"/></svg></div>
                     <h3>Waterfront Dock</h3>
                     <p>Direct waterfront access for raw-material off-loading, minimizing transit time and ensuring maximum freshness of live clams.</p>
                 </div>
                 <div class="diff-card reveal" style="transition-delay:0.15s">
-                    <div class="diff-icon">💧</div>
+                    <div class="diff-icon"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-depuration"/></svg></div>
                     <h3>Advanced Depuration</h3>
                     <p>State-of-the-art depuration system for purging clams of sand, grit, and contaminants before processing — ensuring purity.</p>
                 </div>
                 <div class="diff-card reveal" style="transition-delay:0.25s">
-                    <div class="diff-icon">⚙️</div>
+                    <div class="diff-icon"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-gear"/></svg></div>
                     <h3>Automated Processing</h3>
                     <p>End-to-end automated processing line delivering higher productivity, superior hygiene, and consistent quality control.</p>
                 </div>
                 <div class="diff-card reveal" style="transition-delay:0.3s">
-                    <div class="diff-icon">📊</div>
+                    <div class="diff-icon"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-data"/></svg></div>
                     <h3>Process Flow Automation</h3>
                     <p>Total quality assurance through digital process flow tracking — every lot traced from purchase order to final shipment.</p>
                 </div>
@@ -288,44 +396,44 @@
 
             <div class="process-flow reveal">
                 <div class="process-step">
-                    <div class="process-step-dot">🥚</div>
+                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-hatchery"/></svg></div>
                     <h3>Hatchery</h3>
                     <p>Seed production in our integrated clam hatchery</p>
                 </div>
                 <div class="process-step">
-                    <div class="process-step-dot">🌊</div>
+                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-growout"/></svg></div>
                     <h3>Grow Out</h3>
                     <p>Community-managed in natural backwater beds</p>
                 </div>
                 <div class="process-step">
-                    <div class="process-step-dot">🪣</div>
+                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-harvest"/></svg></div>
                     <h3>Harvesting</h3>
                     <p>Traditional methods by local fishermen</p>
                 </div>
                 <div class="process-step">
-                    <div class="process-step-dot">💧</div>
+                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-depuration"/></svg></div>
                     <h3>Depuration</h3>
                     <p>Advanced purging systems for purity</p>
                 </div>
                 <div class="process-step">
-                    <div class="process-step-dot">🏭</div>
+                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-plant"/></svg></div>
                     <h3>Processing</h3>
                     <p>Automated grading, cooking & separation</p>
                 </div>
                 <div class="process-step">
-                    <div class="process-step-dot">📦</div>
+                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-pack"/></svg></div>
                     <h3>Packing</h3>
                     <p>QC-verified freezing & packaging</p>
                 </div>
                 <div class="process-step">
-                    <div class="process-step-dot">✈️</div>
+                    <div class="process-step-dot"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-export"/></svg></div>
                     <h3>Export</h3>
                     <p>Global shipment to key markets</p>
                 </div>
             </div>
 
             <div class="process-badge reveal">
-                <span>🔄 &nbsp; Seeds return to hatchery — completing the circle</span>
+                <span><svg class="ri" aria-hidden="true" width="20" height="20" style="color:var(--teal-light);vertical-align:middle"><use href="#ri-export"/></svg> &nbsp; Seeds return to hatchery — completing the circle</span>
             </div>
         </div>
     </section>
@@ -370,23 +478,23 @@
                 <div class="method-column method-ours">
                     <h3>The Relish Method</h3>
                     <div class="method-item">
-                        <div class="method-item-icon">✓</div>
+                        <div class="method-item-icon"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l4 4 6-6"/></svg></div>
                         <p>We buy whole, live clams directly from fishermen — giving them more time to fish</p>
                     </div>
                     <div class="method-item">
-                        <div class="method-item-icon">✓</div>
+                        <div class="method-item-icon"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l4 4 6-6"/></svg></div>
                         <p>Advanced depuration in controlled environment</p>
                     </div>
                     <div class="method-item">
-                        <div class="method-item-icon">✓</div>
+                        <div class="method-item-icon"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l4 4 6-6"/></svg></div>
                         <p>End-to-end automated processing line</p>
                     </div>
                     <div class="method-item">
-                        <div class="method-item-icon">✓</div>
+                        <div class="method-item-icon"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l4 4 6-6"/></svg></div>
                         <p>Higher productivity with superior hygiene standards</p>
                     </div>
                     <div class="method-item">
-                        <div class="method-item-icon">✓</div>
+                        <div class="method-item-icon"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l4 4 6-6"/></svg></div>
                         <p>Produces a consistently superior quality end-product</p>
                     </div>
                 </div>
@@ -427,7 +535,7 @@
 
             <div class="products-grid">
                 <div class="product-card reveal">
-                    <div class="product-img" style="background: linear-gradient(135deg, #1a2a3a, #2a4a5a);">🦪</div>
+                    <div class="product-img" style="background: linear-gradient(135deg, #1a2a3a, #2a4a5a);"><svg class="ri" aria-hidden="true" width="48" height="48" style="color:rgba(255,255,255,0.65)"><use href="#ri-clam"/></svg></div>
                     <div class="product-info">
                         <h3>Frozen Whole Clam</h3>
                         <p>Whole shell-on clams, individually quick frozen for maximum freshness and authentic presentation.</p>
@@ -435,7 +543,7 @@
                     </div>
                 </div>
                 <div class="product-card reveal" style="transition-delay:0.1s">
-                    <div class="product-img" style="background: linear-gradient(135deg, #2a1a1a, #4a3a2a);">🍲</div>
+                    <div class="product-img" style="background: linear-gradient(135deg, #2a1a1a, #4a3a2a);"><svg class="ri" aria-hidden="true" width="48" height="48" style="color:rgba(255,255,255,0.65)"><use href="#ri-bowl"/></svg></div>
                     <div class="product-info">
                         <h3>Frozen Boiled Clam Meat</h3>
                         <p>Ready-to-use boiled clam meat, processed and frozen at peak freshness. Ideal for soups and stir-fry.</p>
@@ -443,7 +551,7 @@
                     </div>
                 </div>
                 <div class="product-card reveal" style="transition-delay:0.2s">
-                    <div class="product-img" style="background: linear-gradient(135deg, #0a1a2a, #1a3040);">📦</div>
+                    <div class="product-img" style="background: linear-gradient(135deg, #0a1a2a, #1a3040);"><svg class="ri" aria-hidden="true" width="48" height="48" style="color:rgba(255,255,255,0.65)"><use href="#ri-pack"/></svg></div>
                     <div class="product-info">
                         <h3>Vacuum Packed Whole Clam</h3>
                         <p>Shelf-stable vacuum packed whole clams. Extended shelf life without compromising quality.</p>
@@ -451,7 +559,7 @@
                     </div>
                 </div>
                 <div class="product-card reveal" style="transition-delay:0.3s">
-                    <div class="product-img" style="background: linear-gradient(135deg, #1a2a1a, #2a4a3a);">🧊</div>
+                    <div class="product-img" style="background: linear-gradient(135deg, #1a2a1a, #2a4a3a);"><svg class="ri" aria-hidden="true" width="48" height="48" style="color:rgba(255,255,255,0.65)"><use href="#ri-frozen"/></svg></div>
                     <div class="product-info">
                         <h3>Pasteurized Clam Meat</h3>
                         <p>Pasteurized and packed clam meat for foodservice and retail applications worldwide.</p>
@@ -477,79 +585,79 @@
                     <!-- Production Stream -->
                     <div>
                         <div class="stream-header">
-                            <div class="stream-header-icon prod">📦</div>
+                            <div class="stream-header-icon prod"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-pack"/></svg></div>
                             <h3 class="prod-color">Production Stream</h3>
                         </div>
 
                         <div class="df-step df-prod-step">
-                            <div class="df-sent-badge prod-bg">Data Sent ✓</div>
+                            <div class="df-sent-badge prod-bg">Data Sent</div>
                             <div class="df-step-header">
                                 <span class="df-step-name">Raw Material Intake</span>
                                 <span class="df-step-form prod-bg">Form 1</span>
                             </div>
                             <div class="df-step-worker">
-                                <div class="df-worker-avatar prod-bg">👷</div>
+                                <div class="df-worker-avatar prod-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-production"/></svg></div>
                                 <div class="df-worker-info">
                                     <p>Production Staff</p>
                                     <p>Collecting data...</p>
                                 </div>
                             </div>
                             <div class="df-data-icons">
-                                <span>📷</span><span>🔍</span><span>⚖️</span><span>📊</span>
+                                <span class="df-data-tag">IMG</span><span class="df-data-tag">SCAN</span><span class="df-data-tag">WT</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-data"/></svg>
                             </div>
                         </div>
 
                         <div class="df-step df-prod-step">
-                            <div class="df-sent-badge prod-bg">Data Sent ✓</div>
+                            <div class="df-sent-badge prod-bg">Data Sent</div>
                             <div class="df-step-header">
                                 <span class="df-step-name">Pre-Processing</span>
                                 <span class="df-step-form prod-bg">Form 2</span>
                             </div>
                             <div class="df-step-worker">
-                                <div class="df-worker-avatar prod-bg">👷</div>
+                                <div class="df-worker-avatar prod-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-production"/></svg></div>
                                 <div class="df-worker-info">
                                     <p>Production Staff</p>
                                     <p>Collecting data...</p>
                                 </div>
                             </div>
                             <div class="df-data-icons">
-                                <span>📷</span><span>🔍</span><span>⚖️</span><span>📊</span>
+                                <span class="df-data-tag">IMG</span><span class="df-data-tag">SCAN</span><span class="df-data-tag">WT</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-data"/></svg>
                             </div>
                         </div>
 
                         <div class="df-step df-prod-step">
-                            <div class="df-sent-badge prod-bg">Data Sent ✓</div>
+                            <div class="df-sent-badge prod-bg">Data Sent</div>
                             <div class="df-step-header">
                                 <span class="df-step-name">Processing</span>
                                 <span class="df-step-form prod-bg">Form 3</span>
                             </div>
                             <div class="df-step-worker">
-                                <div class="df-worker-avatar prod-bg">👷</div>
+                                <div class="df-worker-avatar prod-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-production"/></svg></div>
                                 <div class="df-worker-info">
                                     <p>Production Staff</p>
                                     <p>Collecting data...</p>
                                 </div>
                             </div>
                             <div class="df-data-icons">
-                                <span>📷</span><span>🔍</span><span>⚖️</span><span>📊</span>
+                                <span class="df-data-tag">IMG</span><span class="df-data-tag">SCAN</span><span class="df-data-tag">WT</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-data"/></svg>
                             </div>
                         </div>
 
                         <div class="df-step df-prod-step">
-                            <div class="df-sent-badge prod-bg">Data Sent ✓</div>
+                            <div class="df-sent-badge prod-bg">Data Sent</div>
                             <div class="df-step-header">
                                 <span class="df-step-name">Freezing & Packing</span>
                                 <span class="df-step-form prod-bg">Form 4</span>
                             </div>
                             <div class="df-step-worker">
-                                <div class="df-worker-avatar prod-bg">👷</div>
+                                <div class="df-worker-avatar prod-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-production"/></svg></div>
                                 <div class="df-worker-info">
                                     <p>Production Staff</p>
                                     <p>Collecting data...</p>
                                 </div>
                             </div>
                             <div class="df-data-icons">
-                                <span>📷</span><span>🔍</span><span>⚖️</span><span>📊</span>
+                                <span class="df-data-tag">IMG</span><span class="df-data-tag">SCAN</span><span class="df-data-tag">WT</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-data"/></svg>
                             </div>
                         </div>
                     </div>
@@ -557,79 +665,79 @@
                     <!-- QC Stream -->
                     <div>
                         <div class="stream-header">
-                            <div class="stream-header-icon qc">✅</div>
+                            <div class="stream-header-icon qc"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-qc"/></svg></div>
                             <h3 class="qc-color">Quality Assurance Stream</h3>
                         </div>
 
                         <div class="df-step df-qc-step">
-                            <div class="df-sent-badge qc-bg">QC Data Sent ✓</div>
+                            <div class="df-sent-badge qc-bg">QC Data Sent</div>
                             <div class="df-step-header">
                                 <span class="df-step-name">Intake QC Check</span>
                                 <span class="df-step-form qc-bg">QC Form 1</span>
                             </div>
                             <div class="df-step-worker">
-                                <div class="df-worker-avatar qc-bg">🔬</div>
+                                <div class="df-worker-avatar qc-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-qc"/></svg></div>
                                 <div class="df-worker-info">
                                     <p>QC Inspector</p>
                                     <p>Performing checks...</p>
                                 </div>
                             </div>
                             <div class="df-data-icons">
-                                <span>✅</span><span>🌡️</span><span>⚖️</span><span>📷</span>
+                                <span class="df-data-tag">OK</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-coldchain"/></svg><span class="df-data-tag">WT</span><span class="df-data-tag">IMG</span>
                             </div>
                         </div>
 
                         <div class="df-step df-qc-step">
-                            <div class="df-sent-badge qc-bg">QC Data Sent ✓</div>
+                            <div class="df-sent-badge qc-bg">QC Data Sent</div>
                             <div class="df-step-header">
                                 <span class="df-step-name">Pre-Process QC Check</span>
                                 <span class="df-step-form qc-bg">QC Form 2</span>
                             </div>
                             <div class="df-step-worker">
-                                <div class="df-worker-avatar qc-bg">🔬</div>
+                                <div class="df-worker-avatar qc-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-qc"/></svg></div>
                                 <div class="df-worker-info">
                                     <p>QC Inspector</p>
                                     <p>Performing checks...</p>
                                 </div>
                             </div>
                             <div class="df-data-icons">
-                                <span>✅</span><span>🌡️</span><span>⚖️</span><span>📷</span>
+                                <span class="df-data-tag">OK</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-coldchain"/></svg><span class="df-data-tag">WT</span><span class="df-data-tag">IMG</span>
                             </div>
                         </div>
 
                         <div class="df-step df-qc-step">
-                            <div class="df-sent-badge qc-bg">QC Data Sent ✓</div>
+                            <div class="df-sent-badge qc-bg">QC Data Sent</div>
                             <div class="df-step-header">
                                 <span class="df-step-name">Processing QC Check</span>
                                 <span class="df-step-form qc-bg">QC Form 3</span>
                             </div>
                             <div class="df-step-worker">
-                                <div class="df-worker-avatar qc-bg">🔬</div>
+                                <div class="df-worker-avatar qc-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-qc"/></svg></div>
                                 <div class="df-worker-info">
                                     <p>QC Inspector</p>
                                     <p>Performing checks...</p>
                                 </div>
                             </div>
                             <div class="df-data-icons">
-                                <span>✅</span><span>🌡️</span><span>⚖️</span><span>📷</span>
+                                <span class="df-data-tag">OK</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-coldchain"/></svg><span class="df-data-tag">WT</span><span class="df-data-tag">IMG</span>
                             </div>
                         </div>
 
                         <div class="df-step df-qc-step">
-                            <div class="df-sent-badge qc-bg">QC Data Sent ✓</div>
+                            <div class="df-sent-badge qc-bg">QC Data Sent</div>
                             <div class="df-step-header">
                                 <span class="df-step-name">Final QC Check</span>
                                 <span class="df-step-form qc-bg">QC Form 4</span>
                             </div>
                             <div class="df-step-worker">
-                                <div class="df-worker-avatar qc-bg">🔬</div>
+                                <div class="df-worker-avatar qc-bg"><svg class="ri" aria-hidden="true" width="20" height="20"><use href="#ri-qc"/></svg></div>
                                 <div class="df-worker-info">
                                     <p>QC Inspector</p>
                                     <p>Performing checks...</p>
                                 </div>
                             </div>
                             <div class="df-data-icons">
-                                <span>✅</span><span>🌡️</span><span>⚖️</span><span>📷</span>
+                                <span class="df-data-tag">OK</span><svg class="ri df-data-tag" aria-hidden="true" width="16" height="16"><use href="#ri-coldchain"/></svg><span class="df-data-tag">WT</span><span class="df-data-tag">IMG</span>
                             </div>
                         </div>
                     </div>
@@ -684,21 +792,21 @@
             <!-- Legend -->
             <div class="df-legend reveal">
                 <div class="df-legend-item">
-                    <div class="df-legend-dot prod">👷</div>
+                    <div class="df-legend-dot prod"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-production"/></svg></div>
                     <div class="df-legend-text">
                         <p>Production Staff</p>
                         <p>White coat, hairnet, gloves</p>
                     </div>
                 </div>
                 <div class="df-legend-item">
-                    <div class="df-legend-dot qc">🔬</div>
+                    <div class="df-legend-dot qc"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-qc"/></svg></div>
                     <div class="df-legend-text">
                         <p>QC Inspector</p>
                         <p>Lab coat, safety glasses</p>
                     </div>
                 </div>
                 <div class="df-legend-item">
-                    <div class="df-legend-dot data">⚡</div>
+                    <div class="df-legend-dot data"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-data"/></svg></div>
                     <div class="df-legend-text">
                         <p>Data Flow</p>
                         <p>Real-time data transmission</p>
@@ -717,17 +825,17 @@
 
             <div class="markets-grid">
                 <div class="market-card reveal">
-                    <div class="market-flag">🇯🇵</div>
+                    <div class="market-flag"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-globe"/></svg><span class="market-label">JAPAN · 日本</span></div>
                     <h3>Japan</h3>
                     <p>Shijimi (しじみ) is deeply embedded in Japanese cuisine — from traditional miso soup to health supplements. Japan is our primary market.</p>
                 </div>
                 <div class="market-card reveal" style="transition-delay:0.1s">
-                    <div class="market-flag">🇨🇳</div>
+                    <div class="market-flag"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-globe"/></svg><span class="market-label">CHINA · 中国</span></div>
                     <h3>China</h3>
                     <p>Growing demand for premium clam products across China's expanding seafood market and foodservice industry.</p>
                 </div>
                 <div class="market-card reveal" style="transition-delay:0.2s">
-                    <div class="market-flag">🇺🇸</div>
+                    <div class="market-flag"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-globe"/></svg><span class="market-label">U.S.A.</span></div>
                     <h3>United States</h3>
                     <p>Serving the American market's appetite for high-quality, sustainably sourced clam products for retail and foodservice.</p>
                 </div>
@@ -745,28 +853,28 @@
 
                     <div class="contact-info">
                         <div class="contact-item">
-                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-icon"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-pin"/></svg></div>
                             <div>
                                 <h3>Address</h3>
                                 <p>Relish Hao Hao Chi Foods<br>26/599, M.O. Ward,<br>Alappuzha, Kerala<br>India — 688001</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-item-icon">👤</div>
+                            <div class="contact-item-icon"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-person"/></svg></div>
                             <div>
                                 <h3>Contact Person</h3>
                                 <p>Motty Philip</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-icon"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-phone"/></svg></div>
                             <div>
                                 <h3>Phone / WhatsApp</h3>
                                 <a href="tel:+919446012324">+91 94460 12324</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-item-icon">✉️</div>
+                            <div class="contact-item-icon"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-mail"/></svg></div>
                             <div>
                                 <h3>Email</h3>
                                 <a href="mailto:motty@relishfoods.co">motty@relishfoods.co</a>
