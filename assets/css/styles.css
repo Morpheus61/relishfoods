@@ -1548,9 +1548,11 @@ footer a {
 /* mono utility */
 .mono { font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace; }
 
-/* H1 headings in dark sections */
+/* H1/H2 headings in dark sections */
 .process h1.section-title,
-.dataflow h1.section-title {
+.process h2.section-title,
+.dataflow h1.section-title,
+.dataflow h2.section-title {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: clamp(28px, 4vw, 42px);
     font-weight: 600;
