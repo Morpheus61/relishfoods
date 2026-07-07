@@ -719,6 +719,16 @@ section {
     display: block;
 }
 
+/* Styled fallback for browsers without video support */
+.video-noscript-fallback {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
 .video-controls {
     position: absolute;
     bottom: 0;

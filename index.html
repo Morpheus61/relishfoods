@@ -297,7 +297,8 @@
     <!-- ═══ HERO — Video Background ═══ -->
     <section class="hero">
         <div class="hero-video-bg">
-            <video autoplay muted loop playsinline preload="none">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg">
+                <!-- WebM source (add after running ffmpeg commands — see Phase 4 notes) -->
                 <source src="assets/videos/hero-water.mp4" type="video/mp4">
                 <track kind="captions" default>
             </video>
@@ -494,10 +495,12 @@
             <p class="section-desc reveal" style="margin: 0 auto;">Premium clam products for discerning global markets — watch our full product showcase.</p>
 
             <div class="portfolio-video-container reveal">
-                <video id="portfolioVideo" preload="none" poster="assets/images/relish-logo.png">
-                    <source src="assets/videos/product-profile.mp4" type="video/mp4">
+                <video id="portfolioVideo" preload="none" poster="assets/images/product-poster.jpg">
+                    <!-- src deferred by IntersectionObserver — set via data-src -->
+                    <source data-src="assets/videos/product-profile.webm" type="video/webm">
+                    <source data-src="assets/videos/product-profile.mp4" type="video/mp4">
                     <track kind="captions" default>
-                    Your browser does not support the video tag.
+                    <img src="assets/images/relish-logo.png" alt="Relish Foods — product portfolio preview" class="video-noscript-fallback">
                 </video>
                 <div class="video-controls">
                     <button class="video-play-btn" id="videoPlayBtn">▶</button>

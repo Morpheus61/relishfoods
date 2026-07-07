@@ -362,6 +362,31 @@ function initFlowBoard() {
     if (flowSection) io.observe(flowSection);
 }
 
+// ─── PRODUCT VIDEO LAZY LOAD ───
+// Sets data-src → src only when video is near the viewport.
+// Companion to preload="none" on #portfolioVideo.
+function initVideoLazyLoad() {
+    const video = document.getElementById('portfolioVideo');
+    if (!video || !('IntersectionObserver' in window)) {
+        // Fallback: load immediately if observer unsupported
+        if (video) {
+            video.querySelectorAll('source[data-src]').forEach(s => { s.src = s.dataset.src; });
+            video.load();
+        }
+        return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.querySelectorAll('source[data-src]').forEach(s => { s.src = s.dataset.src; });
+                video.load();
+                observer.disconnect();
+            }
+        });
+    }, { rootMargin: '200px 0px' }); // start loading 200 px before entering view
+    observer.observe(video);
+}
+
 // ─── CONTACT FORM (EMAILJS) ───
 async function handleContactSubmit(e) {
     e.preventDefault();
@@ -405,6 +430,9 @@ async function handleContactSubmit(e) {
 // ─── INIT ───
 document.addEventListener('DOMContentLoaded', () => {
     initVideoPlayer();
+    initVideoLazyLoad();
+    initRingAnimation();
+    initFlowBoard();
     initProcessRing();
     initFlowBoard();
 
