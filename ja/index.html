@@ -1,62 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relish Foods — Premium Clam Processing | Alappuzha, Kerala</title>
-    <meta name="description" content="Relish Hao Hao Chi Foods — premium clam processing from Kerala’s backwaters. Hatchery to export, serving Japan, China &amp; USA markets.">
-    <meta name="keywords" content="clam processing, Shijimi, frozen clam meat, Kerala seafood, clam export, Alappuzha, depuration, sustainable seafood, しじみ, freshwater clam, Vembanad, clam hatchery, frozen seafood export India">
+
+    <!-- TODO: JA translation → page title -->
+    <title>Relish Foods — プレミアム貝類加工 | アラップーザ、ケーララ</title>
+
+    <!-- TODO: JA translation → meta description (≤160 chars) -->
+    <meta name="description" content="Relish Hao Hao Chi Foods — ケーララ州の干潟から届けるプレミアム貝類加工。孵化場から輸出まで一貫した管理、日本・中国・米国市場へ供給。">
+
+    <meta name="keywords" content="しじみ, 蜆, 冷凍貝肉, ケーララ産シーフード, 貝類輸出, アラップーザ, 淡水貝, clam processing Kerala, Shijimi Japan export">
     <meta name="author" content="Relish Hao Hao Chi Foods">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://relishfoods.co/">
+    <link rel="canonical" href="https://relishfoods.co/ja/">
 
-    <!-- Geo Meta (Local SEO) -->
+    <!-- Geo Meta -->
     <meta name="geo.region" content="IN-KL">
     <meta name="geo.placename" content="Alappuzha, Kerala, India">
     <meta name="geo.position" content="9.4981;76.3388">
     <meta name="ICBM" content="9.4981, 76.3388">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Relish Foods — Premium Clam Processing | Alappuzha, Kerala">
-    <meta property="og:description" content="Earth-friendly premium clam processing from Kerala's backwaters. Integrated hatchery, automated processing, serving Japan, China & USA markets.">
+    <!-- TODO: JA translation → og:title / og:description -->
+    <meta property="og:title" content="Relish Foods — プレミアム貝類加工 | アラップーザ、ケーララ">
+    <meta property="og:description" content="ケーララ州の干潟から届けるプレミアム貝類加工。孵化場から輸出まで、日本・中国・米国市場へ供給。">
     <meta property="og:image" content="https://relishfoods.co/assets/images/relish-logo.png">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
-    <meta property="og:image:alt" content="Relish Foods logo — Premium Clam Processing">
-    <meta property="og:url" content="https://relishfoods.co/">
+    <meta property="og:image:alt" content="Relish Foods ロゴ — プレミアム貝類加工">
+    <meta property="og:url" content="https://relishfoods.co/ja/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Relish Hao Hao Chi Foods">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Relish Foods — Premium Clam Processing">
-    <meta name="twitter:description" content="Earth-friendly premium clam processing from Kerala's backwaters. Integrated hatchery, automated processing, serving Japan, China & USA markets.">
+    <meta name="twitter:title" content="Relish Foods — プレミアム貝類加工">
+    <meta name="twitter:description" content="ケーララ州の干潟から届けるプレミアム貝類加工。孵化場から輸出まで一貫した管理。">
     <meta name="twitter:image" content="https://relishfoods.co/assets/images/relish-logo.png">
-    <meta name="twitter:image:alt" content="Relish Foods logo — Premium Clam Processing">
+    <meta name="twitter:image:alt" content="Relish Foods ロゴ — プレミアム貝類加工">
 
     <!-- Favicon & App Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#0a0f14">
 
-    <!-- DNS Prefetch for third-party origins -->
+    <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
-    <!-- Fonts (non-render-blocking, trimmed to only used weights) -->
+    <!-- Fonts: existing stack + Noto Sans JP for Japanese body copy -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- Japanese font-family override — applied after base styles load -->
+    <style>
+        body {
+            font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+                         'Yu Gothic Medium', 'Yu Gothic', 'Meiryo',
+                         'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        /* Headings retain Cormorant for display Latin; kanji in fallback stack */
+        .section-title,
+        .hero-title {
+            font-family: 'Cormorant Garamond', 'Hiragino Mincho ProN', 'Yu Mincho',
+                         Georgia, 'Times New Roman', serif;
+        }
+        /* Monospace labels use JetBrains then system mono */
+        .mono, .eyebrow, .cl-eyebrow, .cl-loop,
+        .stage-row .num, .stage-row .tag,
+        .flow-header .flow-title, .flow-col-head .lbl,
+        .flow-stage .stage-meta, .flow-stage .status,
+        .gate-label, .gate-strike, button.replay {
+            font-family: 'JetBrains Mono', 'SF Mono', Consolas, 'Courier New', monospace;
+        }
+        /* Language switcher pill */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+        }
+        .lang-switch a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            transition: color .2s;
+        }
+        .lang-switch a.active,
+        .lang-switch a:hover { color: white; }
+        .lang-switch span { color: rgba(255,255,255,0.2); }
+    </style>
 
     <!-- Preload LCP image -->
-    <link rel="preload" as="image" href="assets/images/relish-logo.png">
+    <link rel="preload" as="image" href="../assets/images/relish-logo.png">
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data — Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,7 +115,7 @@
       "alternateName": "Relish Foods",
       "url": "https://relishfoods.co",
       "logo": "https://relishfoods.co/assets/images/relish-logo.png",
-      "description": "Earth-friendly premium clam processing from Kerala's backwaters. Integrated hatchery, automated processing, serving Japan, China & USA markets.",
+      "description": "ケーララ州の干潟から届けるプレミアム貝類加工。孵化場から輸出まで一貫した管理。",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "26/599, M.O. Ward",
@@ -82,102 +131,19 @@
         "email": "motty@relishfoods.co",
         "areaServed": ["JP", "CN", "US", "IN"],
         "availableLanguage": ["English", "Japanese", "Chinese"]
-      },
-      "sameAs": [],
-      "foundingLocation": {
-        "@type": "Place",
-        "name": "Alappuzha, Kerala, India"
-      },
-      "knowsAbout": ["Clam Processing", "Shijimi", "Frozen Seafood", "Sustainable Aquaculture", "Depuration"],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Frozen Whole Clam",
-            "description": "Whole shell-on clams, individually quick frozen for maximum freshness and authentic presentation.",
-            "category": "Frozen Seafood"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Frozen Boiled Clam Meat",
-            "description": "Ready-to-use boiled clam meat, processed and frozen at peak freshness.",
-            "category": "Frozen Seafood"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Vacuum Packed Whole Clam",
-            "description": "Shelf-stable vacuum packed whole clams with extended shelf life.",
-            "category": "Shelf-stable Seafood"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Pasteurized Clam Meat",
-            "description": "Pasteurized and packed clam meat for foodservice and retail applications worldwide.",
-            "category": "Processed Seafood"
-          }
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Relish Hao Hao Chi Foods",
-      "url": "https://relishfoods.co",
-      "description": "Premium clam processing from Kerala's backwaters",
-      "inLanguage": "en"
+      }
     }
     </script>
 
-    <!-- Product structured data (B2B audience, no pricing) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Frozen Whole Clam / IQF Shijimi",
-      "alternateName": "Individually Quick Frozen Freshwater Clam",
-      "description": "Whole shell-on freshwater clams (Corbicula fluminea) sourced from Kerala’s Vembanad backwaters. Individually quick frozen within hours of harvest for maximum freshness. Suitable for miso soup, hot pot and foodservice applications.",
-      "brand": { "@type": "Brand", "name": "Relish Hao Hao Chi Foods" },
-      "manufacturer": { "@type": "Organization", "name": "Relish Hao Hao Chi Foods", "url": "https://relishfoods.co" },
-      "audience": { "@type": "BusinessAudience", "audienceType": "B2B foodservice and retail importers" },
-      "category": "Frozen Seafood",
-      "countryOfOrigin": { "@type": "Country", "name": "India" }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Pasteurized Clam Meat",
-      "description": "Pasteurized freshwater clam meat from Kerala’s Vembanad backwaters. Lot-level traced, processed under HACCP-aligned protocols. For foodservice and retail applications worldwide.",
-      "brand": { "@type": "Brand", "name": "Relish Hao Hao Chi Foods" },
-      "manufacturer": { "@type": "Organization", "name": "Relish Hao Hao Chi Foods", "url": "https://relishfoods.co" },
-      "audience": { "@type": "BusinessAudience", "audienceType": "B2B foodservice and retail importers" },
-      "category": "Processed Seafood",
-      "countryOfOrigin": { "@type": "Country", "name": "India" }
-    }
-    </script>
-
-    <!-- hreflang: self + ja pair; uncomment zh when /zh/ page is live -->
-    <link rel="alternate" hreflang="en" href="https://relishfoods.co/">
+    <!-- hreflang: ja self + en canonical + x-default -->
     <link rel="alternate" hreflang="ja" href="https://relishfoods.co/ja/">
+    <link rel="alternate" hreflang="en" href="https://relishfoods.co/">
     <!-- <link rel="alternate" hreflang="zh" href="https://relishfoods.co/zh/"> -->
     <link rel="alternate" hreflang="x-default" href="https://relishfoods.co/">
 </head>
 <body>
 
-    <!-- ═══ SVG ICON SPRITE (inline, hidden — reference with <use href="#ri-...">) ═══ -->
+    <!-- ═══ SVG ICON SPRITE ═══ -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
         <symbol id="ri-hatchery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 3.5C8.7 3.5 6 8.6 6 13a6 6 0 0 0 12 0c0-4.4-2.7-9.5-6-9.5Z"/>
@@ -285,23 +251,25 @@
         </symbol>
     </svg>
 
-    <!-- Noscript fallback for search engines and users without JS -->
+    <!-- Noscript fallback -->
+    <!-- TODO: JA translation -->
     <noscript>
         <div style="padding: 2rem; text-align: center; background: #0a0f14; color: #fff; font-family: sans-serif;">
-            <h2>Relish Hao Hao Chi Foods — Premium Clam Processing</h2>
-            <p>Earth-friendly premium clam processing from Kerala's backwaters, Alappuzha, India.</p>
-            <p>Products: Frozen Whole Clam, Frozen Boiled Clam Meat, Vacuum Packed Whole Clam, Pasteurized Clam Meat.</p>
-            <p>Contact: <a href="mailto:motty@relishfoods.co" style="color: #6ea8fe;">motty@relishfoods.co</a> | <a href="tel:+919446012324" style="color: #6ea8fe;">+91 94460 12324</a></p>
+            <h2>Relish Hao Hao Chi Foods — プレミアム貝類加工</h2>
+            <p>ケーララ州アラップーザの干潟から届ける、地球に優しい貝類加工。</p>
+            <p>製品：冷凍ホールクラム、冷凍ゆで貝肉、真空パック全形貝、パスチャライズ貝肉。</p>
+            <p>お問い合わせ: <a href="mailto:motty@relishfoods.co" style="color: #6ea8fe;">motty@relishfoods.co</a> | <a href="tel:+919446012324" style="color: #6ea8fe;">+91 94460 12324</a></p>
         </div>
     </noscript>
 
     <!-- ═══ NAVIGATION ═══ -->
-    <nav id="navbar" aria-label="Main navigation">
+    <nav id="navbar" aria-label="メインナビゲーション"><!-- TODO: JA translation → aria-label -->
         <div class="nav-inner">
             <a href="#" class="nav-logo">
                 <span class="nav-logo-text">Relish Hao Hao Chi Foods</span>
             </a>
             <ul class="nav-links">
+                <!-- TODO: JA translation → all nav labels -->
                 <li><a href="#about">About</a></li>
                 <li><a href="#differentiators">Why Us</a></li>
                 <li><a href="#process">Process</a></li>
@@ -310,14 +278,21 @@
                 <li><a href="#markets">Markets</a></li>
                 <li><a href="#facility">Facility</a></li>
                 <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+                <!-- Language switcher -->
+                <li class="lang-switch">
+                    <a href="https://relishfoods.co/" aria-label="English version">EN</a>
+                    <span>|</span>
+                    <a href="https://relishfoods.co/ja/" class="active" aria-label="日本語版（現在表示中）" aria-current="page">JP</a>
+                </li>
             </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Open mobile menu">
+            <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="モバイルメニューを開く"><!-- TODO: JA translation → aria-label -->
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Nav -->
+    <!-- TODO: JA translation → all mobile nav labels -->
     <div class="mobile-nav" id="mobileNav">
         <button class="mobile-nav-close" onclick="toggleMobileNav()">&times;</button>
         <a href="#about" onclick="toggleMobileNav()">About</a>
@@ -328,25 +303,33 @@
         <a href="#markets" onclick="toggleMobileNav()">Markets</a>
         <a href="#facility" onclick="toggleMobileNav()">Facility</a>
         <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+        <div class="lang-switch" style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.08);">
+            <a href="https://relishfoods.co/">EN</a>
+            <span>|</span>
+            <a href="https://relishfoods.co/ja/" class="active" aria-current="page">JP</a>
+        </div>
     </div>
 
-    <!-- ═══ HERO — Video Background ═══ -->
+    <!-- ═══ HERO ═══ -->
     <section class="hero">
         <div class="hero-video-bg">
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg">
-                <!-- WebM source (add after running ffmpeg commands — see Phase 4 notes) -->
-                <source src="assets/videos/hero-water.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline preload="metadata" poster="../assets/images/hero-poster.jpg">
+                <source src="../assets/videos/hero-water.mp4" type="video/mp4">
                 <track kind="captions" default>
             </video>
             <div class="hero-video-overlay"></div>
         </div>
 
         <div class="hero-content">
-            <img src="assets/images/relish-logo.png" alt="Relish Foods" class="hero-logo-img" width="220" height="220" fetchpriority="high">
+            <img src="../assets/images/relish-logo.png" alt="Relish Foods" class="hero-logo-img" width="220" height="220" fetchpriority="high">
+            <!-- TODO: JA translation → hero-tagline -->
             <p class="hero-tagline">Earth Friendly</p>
             <p class="hero-japanese">しじみ &nbsp;·&nbsp; Shijimi &nbsp;·&nbsp; 淡水蜆</p>
+            <!-- TODO: JA translation → hero-title (keep brand wordmark "relish" as-is) -->
             <h1 class="hero-title">Dive in to <span class="hero-title-brand">relish</span></h1>
+            <!-- TODO: JA translation → hero-subtitle -->
             <p class="hero-subtitle">Premium Clam from Kerala's Backwaters</p>
+        </div>
 
         <div class="scroll-indicator">
             <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -354,6 +337,7 @@
     </section>
 
     <!-- ═══ ABOUT ═══ -->
+    <!-- TODO: JA translation → entire About section copy -->
     <section class="about" id="about">
         <div class="section-inner">
             <div class="about-grid">
@@ -384,6 +368,7 @@
     </section>
 
     <!-- ═══ DIFFERENTIATORS ═══ -->
+    <!-- TODO: JA translation → entire Why Us section copy -->
     <section class="differentiators" id="differentiators">
         <div class="section-inner">
             <p class="section-label reveal">Why Relish</p>
@@ -426,6 +411,7 @@
     </section>
 
     <!-- ═══ CIRCULAR ECONOMY / PROCESS ═══ -->
+    <!-- TODO: JA translation → eyebrow, h2, section-sub, stage names/descriptions, loop-note -->
     <section class="process" id="process">
         <div class="page">
             <div class="eyebrow mono">Closed-Loop System</div>
@@ -438,7 +424,6 @@
                         <circle class="ring-track" cx="200" cy="200" r="160"/>
                         <path id="progressArc" class="ring-progress" d=""/>
                         <circle id="pulseDot" class="pulse-dot" r="4" fill="#4fb8b0"/>
-                        <!-- stage nodes injected by JS -->
                         <g id="nodesGroup"></g>
                     </svg>
                     <div class="center-label" aria-live="polite">
@@ -447,7 +432,6 @@
                         <div class="cl-loop mono" id="stageLoopNote">Seed stock originates here</div>
                     </div>
                 </div>
-
                 <div class="stage-list" id="stageList"></div>
             </div>
 
@@ -459,6 +443,7 @@
     </section>
 
     <!-- ═══ OUR METHOD vs TRADITIONAL ═══ -->
+    <!-- TODO: JA translation → entire Method section copy -->
     <section class="method" id="method">
         <div class="section-inner">
             <div style="text-align:center; margin-bottom: 1rem;">
@@ -475,7 +460,7 @@
                     </div>
                     <div class="method-item">
                         <div class="method-item-icon">→</div>
-                        <p>Washing & cleaning in open waters of the Vembanad Lake</p>
+                        <p>Washing &amp; cleaning in open waters of the Vembanad Lake</p>
                     </div>
                     <div class="method-item">
                         <div class="method-item-icon">→</div>
@@ -490,11 +475,7 @@
                         <p>Backyard processing with limited hygiene control</p>
                     </div>
                 </div>
-
-                <div class="method-vs">
-                    <span>VS</span>
-                </div>
-
+                <div class="method-vs"><span>VS</span></div>
                 <div class="method-column method-ours">
                     <h3>The Relish Method</h3>
                     <div class="method-item">
@@ -523,6 +504,7 @@
     </section>
 
     <!-- ═══ PRODUCT PORTFOLIO VIDEO ═══ -->
+    <!-- TODO: JA translation → section label, title, description -->
     <section class="product-portfolio" id="portfolio">
         <div class="section-inner" style="text-align:center;">
             <p class="section-label reveal">Product Portfolio</p>
@@ -530,15 +512,14 @@
             <p class="section-desc reveal" style="margin: 0 auto;">Premium clam products for discerning global markets — watch our full product showcase.</p>
 
             <div class="portfolio-video-container reveal">
-                <video id="portfolioVideo" preload="none" poster="assets/images/product-poster.jpg">
-                    <!-- src deferred by IntersectionObserver — set via data-src -->
-                    <source data-src="assets/videos/product-profile.webm" type="video/webm">
-                    <source data-src="assets/videos/product-profile.mp4" type="video/mp4">
+                <video id="portfolioVideo" preload="none" poster="../assets/images/product-poster.jpg">
+                    <source data-src="../assets/videos/product-profile.webm" type="video/webm">
+                    <source data-src="../assets/videos/product-profile.mp4" type="video/mp4">
                     <track kind="captions" default>
-                    <img src="assets/images/relish-logo.png" alt="Relish Foods — product portfolio preview" class="video-noscript-fallback">
+                    <img src="../assets/images/relish-logo.png" alt="Relish Foods — product portfolio preview" class="video-noscript-fallback">
                 </video>
                 <div class="video-controls">
-                    <button class="video-play-btn" id="videoPlayBtn">▶</button>
+                    <button class="video-play-btn" id="videoPlayBtn">&#9654;</button>
                     <div class="video-progress" id="videoProgress">
                         <div class="video-progress-bar" id="videoProgressBar"></div>
                     </div>
@@ -549,6 +530,7 @@
     </section>
 
     <!-- ═══ PRODUCTS GRID ═══ -->
+    <!-- TODO: JA translation → section label, title, description, all 4 card titles/descriptions/tags -->
     <section class="products" id="products">
         <div class="section-inner">
             <p class="section-label reveal">Product Range</p>
@@ -559,7 +541,7 @@
                 <div class="product-card reveal">
                     <div class="product-img" style="background: linear-gradient(135deg, #1a2a3a, #2a4a5a);"><svg class="ri" aria-hidden="true" width="48" height="48" style="color:rgba(255,255,255,0.65)"><use href="#ri-clam"/></svg></div>
                     <div class="product-info">
-                        <h3>Frozen Whole Clam</h3>
+                        <h3>Frozen Whole Clam</h3><!-- TODO: JA translation -->
                         <p>Whole shell-on clams, individually quick frozen for maximum freshness and authentic presentation.</p>
                         <span class="product-tag">Shell-on</span>
                     </div>
@@ -567,7 +549,7 @@
                 <div class="product-card reveal" style="transition-delay:0.1s">
                     <div class="product-img" style="background: linear-gradient(135deg, #2a1a1a, #4a3a2a);"><svg class="ri" aria-hidden="true" width="48" height="48" style="color:rgba(255,255,255,0.65)"><use href="#ri-bowl"/></svg></div>
                     <div class="product-info">
-                        <h3>Frozen Boiled Clam Meat</h3>
+                        <h3>Frozen Boiled Clam Meat</h3><!-- TODO: JA translation -->
                         <p>Ready-to-use boiled clam meat, processed and frozen at peak freshness. Ideal for soups and stir-fry.</p>
                         <span class="product-tag">Ready to use</span>
                     </div>
@@ -575,7 +557,7 @@
                 <div class="product-card reveal" style="transition-delay:0.2s">
                     <div class="product-img" style="background: linear-gradient(135deg, #0a1a2a, #1a3040);"><svg class="ri" aria-hidden="true" width="48" height="48" style="color:rgba(255,255,255,0.65)"><use href="#ri-pack"/></svg></div>
                     <div class="product-info">
-                        <h3>Vacuum Packed Whole Clam</h3>
+                        <h3>Vacuum Packed Whole Clam</h3><!-- TODO: JA translation -->
                         <p>Shelf-stable vacuum packed whole clams. Extended shelf life without compromising quality.</p>
                         <span class="product-tag">Shelf stable</span>
                     </div>
@@ -583,7 +565,7 @@
                 <div class="product-card reveal" style="transition-delay:0.3s">
                     <div class="product-img" style="background: linear-gradient(135deg, #1a2a1a, #2a4a3a);"><svg class="ri" aria-hidden="true" width="48" height="48" style="color:rgba(255,255,255,0.65)"><use href="#ri-frozen"/></svg></div>
                     <div class="product-info">
-                        <h3>Pasteurized Clam Meat</h3>
+                        <h3>Pasteurized Clam Meat</h3><!-- TODO: JA translation -->
                         <p>Pasteurized and packed clam meat for foodservice and retail applications worldwide.</p>
                         <span class="product-tag">Pasteurized</span>
                     </div>
@@ -593,6 +575,7 @@
     </section>
 
     <!-- ═══ DATA FLOW ANIMATION ═══ -->
+    <!-- TODO: JA translation → eyebrow, h2, section-sub; flow board labels injected by JS (update stages[] in main.js for JA) -->
     <section class="dataflow" id="dataflow">
         <div class="page">
             <div class="eyebrow mono">Dual-Verification Pipeline</div>
@@ -604,11 +587,7 @@
                     <div class="flow-title mono">BATCH #RH-SAMPLE-001 · FROZEN WHOLE CLAM</div>
                     <div class="live mono"><span class="live-dot"></span>SIMULATION RUNNING</div>
                 </div>
-
-                <div class="flow-grid" id="flowGrid">
-                    <!-- columns injected by JS -->
-                </div>
-
+                <div class="flow-grid" id="flowGrid"></div>
                 <div class="flow-footer">
                     <span>4 checkpoints · 8 independent confirmations</span>
                     <button type="button" class="replay" id="replayBtn" aria-label="Replay the data flow simulation">
@@ -621,6 +600,7 @@
     </section>
 
     <!-- ═══ MARKETS ═══ -->
+    <!-- TODO: JA translation → section label, title, description, all 3 market card descriptions -->
     <section class="markets" id="markets">
         <div class="section-inner" style="text-align:center;">
             <p class="section-label reveal">Global Reach</p>
@@ -629,12 +609,12 @@
 
             <div class="markets-grid">
                 <div class="market-card reveal">
-                    <div class="market-flag"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-globe"/></svg><span class="market-label">JAPAN · 日本</span></div>
+                    <div class="market-flag"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-globe"/></svg><span class="market-label">JAPAN&nbsp;·&nbsp;日本</span></div>
                     <h3>Japan</h3>
                     <p>Shijimi (しじみ) is deeply embedded in Japanese cuisine — from traditional miso soup to health supplements. Japan is our primary market.</p>
                 </div>
                 <div class="market-card reveal" style="transition-delay:0.1s">
-                    <div class="market-flag"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-globe"/></svg><span class="market-label">CHINA · 中国</span></div>
+                    <div class="market-flag"><svg class="ri" aria-hidden="true" width="28" height="28"><use href="#ri-globe"/></svg><span class="market-label">CHINA&nbsp;·&nbsp;中国</span></div>
                     <h3>China</h3>
                     <p>Growing demand for premium clam products across China's expanding seafood market and foodservice industry.</p>
                 </div>
@@ -648,13 +628,13 @@
     </section>
 
     <!-- ═══ FACILITY STATUS ═══ -->
+    <!-- TODO: JA translation → section label, title, description, milestone labels -->
     <section class="facility-status" id="facility">
         <div class="section-inner">
             <p class="section-label reveal">Facility Status</p>
             <h2 class="section-title reveal">Our Processing Facility</h2>
             <p class="section-desc reveal">State-of-the-art clam processing facility at Panavally, Alappuzha — currently under construction with institutional backing. Built for certification from day one: HACCP-aligned design with lot-level traceability built into plant software.</p>
 
-            <!-- Milestone tracker -->
             <div class="facility-milestones reveal">
                 <div class="milestone milestone--done">
                     <div class="milestone-icon" aria-hidden="true">
@@ -662,55 +642,51 @@
                     </div>
                     <div class="milestone-body">
                         <span class="milestone-label">Land &amp; Clearances</span>
-                        <!-- DATE: confirmed date here -->
+                        <!-- date: TODO -->
                         <span class="milestone-status milestone-status--done">Complete</span>
                     </div>
                 </div>
                 <div class="milestone-connector milestone-connector--done" aria-hidden="true"></div>
-
                 <div class="milestone milestone--active">
                     <div class="milestone-icon" aria-hidden="true">
                         <svg class="ri" width="20" height="20"><use href="#ri-plant"/></svg>
                     </div>
                     <div class="milestone-body">
                         <span class="milestone-label">Structure</span>
-                        <!-- DATE: expected completion here -->
+                        <!-- date: TODO -->
                         <span class="milestone-status milestone-status--active">In Progress</span>
                     </div>
                 </div>
                 <div class="milestone-connector" aria-hidden="true"></div>
-
-                <div class="milestone milestone--pending">
-                    <div class="milestone-icon" aria-hidden="true">
-                        <svg class="ri" width="20" height="20"><use href="#ri-coldchain"/></svg>
-                    </div>
-                    <div class="milestone-body">
-                        <span class="milestone-label">Equipment &amp; Cold Chain</span>
-                        <!-- DATE: target date here -->
-                        <span class="milestone-status milestone-status--pending">Pending</span>
-                    </div>
-                </div>
-                <div class="milestone-connector" aria-hidden="true"></div>
-
                 <div class="milestone milestone--pending">
                     <div class="milestone-icon" aria-hidden="true">
                         <svg class="ri" width="20" height="20"><use href="#ri-gear"/></svg>
                     </div>
                     <div class="milestone-body">
-                        <span class="milestone-label">Commissioning</span>
-                        <!-- DATE: target date here -->
+                        <span class="milestone-label">Equipment &amp; Cold Chain</span>
+                        <!-- date: TODO -->
                         <span class="milestone-status milestone-status--pending">Pending</span>
                     </div>
                 </div>
                 <div class="milestone-connector" aria-hidden="true"></div>
-
                 <div class="milestone milestone--pending">
                     <div class="milestone-icon" aria-hidden="true">
-                        <svg class="ri" width="20" height="20"><use href="#ri-export"/></svg>
+                        <svg class="ri" width="20" height="20"><use href="#ri-data"/></svg>
+                    </div>
+                    <div class="milestone-body">
+                        <span class="milestone-label">Commissioning</span>
+                        <!-- date: TODO -->
+                        <span class="milestone-status milestone-status--pending">Pending</span>
+                    </div>
+                </div>
+                <div class="milestone-connector" aria-hidden="true"></div>
+                <div class="milestone milestone--pending">
+                    <div class="milestone-icon" aria-hidden="true">
+                        <svg class="ri" width="20" height="20"><use href="#ri-pack"/></svg>
                     </div>
                     <div class="milestone-body">
                         <span class="milestone-label">First Production</span>
-                        <!-- DATE: target date here -->
+                        <!-- date: TODO -->
                         <span class="milestone-status milestone-status--pending">Pending</span>
                     </div>
                 </div>
@@ -719,6 +695,7 @@
     </section>
 
     <!-- ═══ CONTACT ═══ -->
+    <!-- TODO: JA translation → section label, title, all contact item headings, form placeholders, button label, associates text -->
     <section class="contact" id="contact">
         <div class="section-inner">
             <div class="contact-grid">
@@ -730,35 +707,35 @@
                         <div class="contact-item">
                             <div class="contact-item-icon"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-pin"/></svg></div>
                             <div>
-                                <h3>Address</h3>
+                                <h3>Address</h3><!-- TODO: JA translation -->
                                 <p>Relish Hao Hao Chi Foods<br>26/599, M.O. Ward,<br>Alappuzha, Kerala<br>India — 688001</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-item-icon"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-person"/></svg></div>
                             <div>
-                                <h3>Contact Person</h3>
+                                <h3>Contact Person</h3><!-- TODO: JA translation -->
                                 <p>Motty Philip</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-item-icon"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-phone"/></svg></div>
                             <div>
-                                <h3>Phone / WhatsApp</h3>
+                                <h3>Phone / WhatsApp</h3><!-- TODO: JA translation -->
                                 <a href="tel:+919446012324">+91 94460 12324</a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-item-icon"><svg class="ri" aria-hidden="true" width="22" height="22"><use href="#ri-mail"/></svg></div>
                             <div>
-                                <h3>Email</h3>
+                                <h3>Email</h3><!-- TODO: JA translation -->
                                 <a href="mailto:motty@relishfoods.co">motty@relishfoods.co</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="associates">
-                        <h3>Our Associates</h3>
+                        <h3>Our Associates</h3><!-- TODO: JA translation -->
                         <div class="associates-logos">
                             <span>苏州泰进食品有限公司<br>Suzhou Taishin Food Co Ltd</span>
                             <span>·</span>
@@ -768,6 +745,7 @@
                 </div>
 
                 <div class="reveal" style="transition-delay:0.2s">
+                    <!-- TODO: JA translation → all form placeholders and button label -->
                     <form class="contact-form" id="contactForm">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Email Address" required>
@@ -783,12 +761,13 @@
     </section>
 
     <!-- ═══ FOOTER ═══ -->
+    <!-- TODO: JA translation → footer text -->
     <footer role="contentinfo">
-        <p>&copy; 2026 Relish Hao Hao Chi Foods. All Rights Reserved. &nbsp;|&nbsp; <a href="https://www.relishfoods.co">www.relishfoods.co</a></p>
+        <p>&copy; 2026 Relish Hao Hao Chi Foods. All Rights Reserved. &nbsp;|&nbsp; <a href="https://www.relishfoods.co">www.relishfoods.co</a> &nbsp;|&nbsp; <a href="https://relishfoods.co/ja/">日本語</a></p>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
