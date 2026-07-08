@@ -1938,6 +1938,7 @@ button.replay:focus-visible { outline: 1.5px solid var(--teal-bright); outline-o
 
 @media (max-width: 640px) {
     section { padding: 3rem 1.25rem; }
+    .nav-dropdown { display: none; }
     .nav-right { gap: 0.5rem; }
     .mobile-menu-btn { display: block; }
     .mobile-nav { display: block; }
