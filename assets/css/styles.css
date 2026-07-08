@@ -93,48 +93,108 @@ nav.scrolled {
     line-height: 1.3;
 }
 
-.nav-links {
+.nav-right {
     display: flex;
-    gap: 2rem;
-    list-style: none;
+    align-items: center;
+    gap: 1rem;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: rgba(255,255,255,0.8);
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: color 0.3s;
+/* ─── DROPDOWN MENU ─── */
+.nav-dropdown {
     position: relative;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 1.5px;
-    background: var(--teal-light);
-    transition: width 0.3s;
+.nav-dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.85);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.52rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.25s, border-color 0.25s, color 0.25s;
 }
 
-.nav-links a:hover { color: white; }
-.nav-links a:hover::after { width: 100%; }
+.nav-dropdown-btn:hover,
+.nav-dropdown.open .nav-dropdown-btn {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.3);
+    color: white;
+}
+
+.nav-chevron {
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.nav-dropdown.open .nav-chevron {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 180px;
+    background: rgba(10, 22, 40, 0.97);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    list-style: none;
+    padding: 0.4rem 0;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+    display: block;
+    animation: dropdown-in 0.18s ease;
+}
+
+@keyframes dropdown-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav-dropdown-menu li a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-dropdown-menu li a:hover {
+    background: rgba(42,157,143,0.12);
+    color: var(--teal-light);
+}
 
 .nav-cta {
     background: var(--teal);
-    color: white !important;
-    padding: 0.55rem 1.3rem;
+    color: white;
+    padding: 0.52rem 1.2rem;
     border-radius: 4px;
-    font-weight: 500 !important;
-    letter-spacing: 0.05em !important;
-    transition: background 0.3s, transform 0.3s !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    white-space: nowrap;
 }
 
-.nav-cta::after { display: none !important; }
 .nav-cta:hover { background: var(--teal-light); transform: translateY(-1px); }
 
 .mobile-menu-btn {
@@ -195,31 +255,31 @@ nav.scrolled {
 }
 
 .hero-logo-img {
-    width: 220px;
+    width: 180px;
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     animation: hero-fade-in 1.2s ease-out;
     filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
 }
 
 .hero-tagline {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: rgba(255,255,255,0.7);
     letter-spacing: 0.15em;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     animation: hero-fade-in 1.2s ease-out 0.3s both;
 }
 
 .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2rem, 5vw, 3.8rem);
     font-weight: 300;
     color: white;
     line-height: 1.15;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
     animation: hero-fade-in 1.2s ease-out 0.5s both;
 }
 
@@ -292,7 +352,7 @@ nav.scrolled {
 
 /* ─── SECTIONS COMMON ─── */
 section {
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
 }
 
 .section-inner {
@@ -311,16 +371,16 @@ section {
 
 .section-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--text-dark);
 }
 
 .section-desc {
-    font-size: 1.05rem;
-    line-height: 1.7;
+    font-size: 0.92rem;
+    line-height: 1.65;
     color: var(--warm-gray);
     max-width: 600px;
 }
@@ -345,16 +405,16 @@ section {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 2.5rem;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .about-text p {
-    font-size: 1.05rem;
-    line-height: 1.8;
+    font-size: 0.92rem;
+    line-height: 1.7;
     color: #555;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .about-highlight {
@@ -376,7 +436,7 @@ section {
 
 .about-visual {
     position: relative;
-    height: 450px;
+    height: 340px;
     border-radius: 12px;
     overflow: hidden;
     background: var(--ocean-dark);
@@ -401,7 +461,7 @@ section {
 
 .about-visual-inner .stat-number {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
+    font-size: 2.25rem;
     font-weight: 300;
     color: white;
 }
@@ -432,12 +492,12 @@ section {
 .diff-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
 }
 
 .diff-card {
-    padding: 2.5rem 2rem;
+    padding: 1.5rem 1.25rem;
     border-radius: 10px;
     background: var(--sand-light);
     border: 1px solid rgba(0,0,0,0.04);
@@ -487,15 +547,15 @@ section {
 
 .diff-card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: var(--text-dark);
 }
 
 .diff-card p {
-    font-size: 0.92rem;
-    line-height: 1.65;
+    font-size: 0.85rem;
+    line-height: 1.55;
     color: var(--warm-gray);
 }
 
@@ -608,7 +668,7 @@ section {
 }
 
 .method-column {
-    padding: 2.5rem;
+    padding: 1.5rem;
     border-radius: 12px;
 }
 
@@ -1200,13 +1260,13 @@ section {
 .markets-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 1.5rem;
+    margin-top: 1.75rem;
 }
 
 .market-card {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 1.75rem 1.5rem;
     border-radius: 12px;
     background: white;
     border: 1px solid rgba(0,0,0,0.04);
@@ -1258,8 +1318,8 @@ section {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-top: 3rem;
+    gap: 2.5rem;
+    margin-top: 2rem;
 }
 
 .contact-info {
@@ -1517,12 +1577,12 @@ footer a {
 /* Section padding & background overrides */
 .process {
     background: var(--bg);
-    padding: 56px 0 48px;
+    padding: 40px 0 36px;
 }
 .dataflow {
     background: var(--bg);
     color: var(--ink);
-    padding: 96px 0 80px;
+    padding: 64px 0 56px;
     border-top: 1px solid rgba(79,184,176,0.12); /* gradient seam from light to dark */
 }
 
@@ -1554,10 +1614,10 @@ footer a {
 .dataflow h1.section-title,
 .dataflow h2.section-title {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(22px, 3vw, 34px);
     font-weight: 600;
     letter-spacing: -0.01em;
-    margin: 0 0 20px;
+    margin: 0 0 16px;
     max-width: 640px;
     line-height: 1.15;
     color: var(--ink);
@@ -1877,8 +1937,8 @@ button.replay:focus-visible { outline: 1.5px solid var(--teal-bright); outline-o
 }
 
 @media (max-width: 640px) {
-    section { padding: 4rem 1.25rem; }
-    .nav-links { display: none; }
+    section { padding: 3rem 1.25rem; }
+    .nav-right { gap: 0.5rem; }
     .mobile-menu-btn { display: block; }
     .mobile-nav { display: block; }
     .diff-grid { grid-template-columns: 1fr; }

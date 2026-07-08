@@ -37,6 +37,32 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
+// ─── DESKTOP NAV DROPDOWN ───
+function toggleNavDropdown() {
+    const dropdown = document.getElementById('navDropdown');
+    const btn = dropdown.querySelector('.nav-dropdown-btn');
+    const isOpen = dropdown.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+}
+
+function closeNavDropdown() {
+    const dropdown = document.getElementById('navDropdown');
+    dropdown.classList.remove('open');
+    dropdown.querySelector('.nav-dropdown-btn').setAttribute('aria-expanded', 'false');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    const dropdown = document.getElementById('navDropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        closeNavDropdown();
+    }
+});
+
+// Expose to global scope for inline onclick
+window.toggleNavDropdown = toggleNavDropdown;
+window.closeNavDropdown = closeNavDropdown;
+
 // ─── MOBILE NAV ───
 function toggleMobileNav() {
     document.getElementById('mobileNav').classList.toggle('open');
